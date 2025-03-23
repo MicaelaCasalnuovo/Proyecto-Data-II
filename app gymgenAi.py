@@ -2,8 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Replace with your actual API key
-GOOGLE_API_KEY = "AIzaSyBjfiz2CoumaJYnfE_iKuAZJ_4VxztieCU"
-
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 import random
 
 exercise_variations = {
