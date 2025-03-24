@@ -55,4 +55,8 @@ typing_extensions==4.12.2
 tzdata==2025.2
 uritemplate==4.1.1
 urllib3==2.3.0
+python_version == "3.11"
+--upgrade pip
+--upgrade setuptools
+google-generativeai --no-cache-dir
 watchdog==6.0.0
