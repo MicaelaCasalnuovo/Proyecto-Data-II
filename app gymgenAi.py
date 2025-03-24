@@ -1,5 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
+# This comment is added to force an update on Streamlit
 
 # Replace with your actual API key
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
