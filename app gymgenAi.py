@@ -1,12 +1,24 @@
 import streamlit as st
-import sys
-sys.path.append("c:/Users/mcasalnuovo/Desktop/IA escritorio/PF IA GYMGENAI/env/Lib/site-packages")
-import google.generativeai as genai
-# This comment is added to force an update on Streamlit
-
-# Replace with your actual API key
-GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+import os
 import random
+
+# Check if GOOGLE_API_KEY is set as an environment variable
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+
+if not GOOGLE_API_KEY:
+    st.error("GOOGLE_API_KEY is not set as an environment variable. Please set it in Streamlit Cloud or in your local environment.")
+    st.stop()
+
+try:
+    import google.generativeai as genai
+    genai.configure(api_key=GOOGLE_API_KEY)
+    model = genai.GenerativeModel('gemini-2.0-flash')
+except ImportError as e:
+    st.error(f"Error importing google.generativeai: {e}. Please make sure it's installed in your requirements.txt file.")
+    st.stop()
+except Exception as e:
+    st.error(f"Error configuring google.generativeai: {e}")
+    st.stop()
 
 exercise_variations = {
     "chest": ["Press de banca", "Press de banca inclinado", "Press de banca declinado", "Aperturas con mancuernas"],
@@ -20,9 +32,6 @@ exercise_variations = {
 def generate_workout_routine(edad, peso, altura, objetivo, dias_entrenamiento):
     """Generates a workout routine using Google GenAI."""
     try:
-        genai.configure(api_key=GOOGLE_API_KEY)
-        model = genai.GenerativeModel('gemini-2.0-flash')
-
         # Select exercise variations
         chest_exercises = random.sample(exercise_variations["chest"], 2)
         back_exercises = random.sample(exercise_variations["back"], 2)
