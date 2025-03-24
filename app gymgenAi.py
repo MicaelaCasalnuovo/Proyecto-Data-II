@@ -1,6 +1,6 @@
 import streamlit as st
 import sys
-sys.path.append("env/Lib/site-packages")
+sys.path.append("c:/Users/mcasalnuovo/Desktop/IA escritorio/PF IA GYMGENAI/env/Lib/site-packages")
 import google.generativeai as genai
 # This comment is added to force an update on Streamlit
 
