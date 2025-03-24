@@ -1,20 +1,16 @@
 import streamlit as st
-import os
 import random
-
-# Check if GOOGLE_API_KEY is set as an environment variable
-GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
-
-if not GOOGLE_API_KEY:
-    st.error("GOOGLE_API_KEY is not set as an environment variable. Please set it in Streamlit Cloud or in your local environment.")
-    st.stop()
 
 try:
     import google.generativeai as genai
+    GOOGLE_API_KEY = st.secrets["API_KEY"]
     genai.configure(api_key=GOOGLE_API_KEY)
     model = genai.GenerativeModel('gemini-2.0-flash')
 except ImportError as e:
     st.error(f"Error importing google.generativeai: {e}. Please make sure it's installed in your requirements.txt file.")
+    st.stop()
+except KeyError:
+    st.error("API_KEY not found in Streamlit secrets. Please set it in Streamlit Cloud or in your local .streamlit/secrets.toml file.")
     st.stop()
 except Exception as e:
     st.error(f"Error configuring google.generativeai: {e}")
