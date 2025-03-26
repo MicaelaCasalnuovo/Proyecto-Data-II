@@ -43,7 +43,7 @@ def generate_workout_routine(edad, peso, altura, objetivo, dias_entrenamiento):
         return f"Error al generar la rutina: {e}"
 
 st.title(f"💪 Generador de Rutina de Ejercicios 🏋️‍♀️")
-st.markdown("✨ Una aplicación para generar rutinas de ejercicios personalizadas. 🚀")
+st.markdown("✨ Una aplicación para crear tus propias rutinas de ejercicios 🚀")
 
 # User input fields
 edad = st.number_input("Edad:", min_value=10, max_value=100, value=25)
@@ -54,13 +54,13 @@ dias_entrenamiento = st.number_input("Días de entrenamiento por semana:", min_v
 
 with st.sidebar:
     st.subheader("Acerca de nosotros 👨‍💻")
-    st.write("Somos un equipo de desarrolladores apasionados por el fitness y la tecnología. Nuestro objetivo es ayudarte a alcanzar tus metas de acondicionamiento físico a través de rutinas de ejercicios personalizadas.")
+    st.write("Somos un equipo de desarrolladores apasionados por la actividad y la tecnología. Nuestro objetivo es ayudarte a alcanzar tus metas de acondicionamiento físico a través de rutinas de ejercicios personalizadas.")
 
     st.subheader("Cómo usar la app 💡")
     st.write("Simplemente ingresa tu edad, peso, altura, objetivo y días de entrenamiento, y la aplicación generará una rutina de ejercicios personalizada para ti.")
 
     st.subheader("Información de contacto 📧")
-    st.write("Si tienes alguna pregunta o comentario, no dudes en contactarnos en gymgenai@example.com")
+    st.write("Si tienes alguna pregunta o comentario, no dudes en contactarnos en gymgenai@gmail.com")
 
 # Generate routine button
 if st.button("Generar Rutina"):
