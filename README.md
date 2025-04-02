@@ -44,3 +44,7 @@ Días de entrenamiento: 4 días a la semana
 La aplicación generará una rutina adaptada a tus necesidades. La rutina puede incluir ejercicios como:Cardio, Pesas,HIIT (entrenamiento a intervalos de alta intensidad)
 
 Realiza tus entrenamientos siguiendo las indicaciones de la app.
+
+
+Link de la documentacion: https://drive.google.com/file/d/1SRONPJHaLwNO7d0JyV2vweMb9RlmEjMK/view?usp=sharing
+Link de la app: https://gymgenai.streamlit.app/
