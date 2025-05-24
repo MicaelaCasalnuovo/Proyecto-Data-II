@@ -2,5 +2,4 @@ El siguiente proyecto analiza las ventas efectuadas en enero-febrero 2023 en el 
 
 Se adjunta google colab: https://colab.research.google.com/drive/1vqAFj6Wi_8203ppC7WXd3AJJD-H7Y6Rc?usp=sharing
 
-Se adjunta presentacion: https://drive.google.com/file/d/1ykBzr9bc6x9ZveHVkgYDvAhEzirdMnyL/view?usp=sharing
-
+Se adjunta presentacion: https://drive.google.com/file/d/1Ihannc13VfaMqB_HCPQ8PXDjHU0X6wfF/view?usp=sharing
